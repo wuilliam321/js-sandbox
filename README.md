@@ -6,10 +6,10 @@ In the project directory, you can run:
 
 To install all dependencies
 
-### `npm start`
+### `npm run start`
 
 Runs the project, basically just run `index.js`
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner, `jest` in order to check all tests.
