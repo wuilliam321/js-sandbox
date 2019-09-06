@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./"
+    // "paths": {
+    //   "@/*": ["src/*"],
+    //   "@Services/*": ["src/services/*"],
+    //   "@EventBus/*": ["src/bus/*"],
+    //   "Icons/*": ["src/components/icons/*"],
+    //   "Modules/*": ["src/modules/*"],
+    //   "Utils/*": ["src/utils/*"],
+    // }
+  },
+  "exclude": ["node_modules", "dist"],
+  "typeAcquisition": {
+      "include": [
+          "jest"
+      ]
+  }
+}
