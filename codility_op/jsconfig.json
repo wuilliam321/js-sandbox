@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false
+  },
+  "typeAcquisition": { "include": [ "jest" ] },
+  "exclude": ["node_modules", "dist"]
+}
