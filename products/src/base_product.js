@@ -1,23 +1,16 @@
-class BaseProduct {
-  constructor(productObject) {
-    Object.assign(this, productObject);
-  }
-
-  get price() {
+const BaseProduct = (function BaseProduct() {
+  function price() {
     return this.amount;
   }
 
-  set price(newPrice) {
-    this.price = newPrice;
-  }
-
-  get parent() {
+  function parent() {
     return this.product;
   }
 
-  set parent(newParent) {
-    this.product = newParent;
-  }
-}
+  return {
+    price,
+    parent,
+  };
+}());
 
 module.exports = BaseProduct;

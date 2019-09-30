@@ -1,14 +1,26 @@
 const BaseProduct = require('./base_product');
 
-class OptionPromo extends BaseProduct {
-  constructor(option) {
-    super(option);
-    this.type = 'PROMO';
-  }
 
-  get price() {
+function OptionPromo(product) {
+  Object.assign(this, BaseProduct, product);
+  this.type = 'PROMO';
+
+  function price() {
     return this.promo(this.parent.amount);
   }
+
+  const {
+    parent, amount, type, promo,
+  } = this;
+
+  return {
+    price,
+    parent,
+    amount,
+    type,
+    promo,
+  };
 }
+
 
 module.exports = OptionPromo;

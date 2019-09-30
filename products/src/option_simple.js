@@ -1,10 +1,21 @@
 const BaseProduct = require('./base_product');
 
-class OptionSimple extends BaseProduct {
-  constructor(option) {
-    super(option);
-    this.type = 'SIMPLE';
+function OptionSimple(product) {
+  Object.assign(this, BaseProduct, product);
+  this.type = 'SIMPLE';
+
+  function price() {
+    return 0;
   }
+
+  const { parent, amount, type } = this;
+
+  return {
+    price,
+    parent,
+    amount,
+    type,
+  };
 }
 
 module.exports = OptionSimple;

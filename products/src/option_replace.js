@@ -1,14 +1,21 @@
 const BaseProduct = require('./base_product');
 
-class OptionReplace extends BaseProduct {
-  constructor(option) {
-    super(option);
-    this.type = 'REPLACE';
-  }
+function OptionReplace(product) {
+  Object.assign(this, BaseProduct, product);
+  this.type = 'REPLACE';
 
-  get price() {
+  function price() {
     return this.amount;
   }
+
+  const { parent, amount, type } = this;
+
+  return {
+    price,
+    parent,
+    amount,
+    type,
+  };
 }
 
 module.exports = OptionReplace;
