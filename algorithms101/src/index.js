@@ -1,3 +1,3 @@
-const test = () => 'Hello World!';
+const LinkedList = require('./linked_list').default;
 
-console.log(test());
+const l = new LinkedList();
